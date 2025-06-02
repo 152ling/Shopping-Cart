@@ -26,31 +26,35 @@ function App() {
   const products = [
     {
       id: 1,
-      name: "T-shirt",
+      name: "優質短袖白T",
       price: 399,
       quantity: 0,
-      image: "https://placehold.co/30x30",
+      image:
+        "https://images.unsplash.com/photo-1534961880437-ce5ae2033053?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
     },
     {
       id: 2,
-      name: "Jeans",
+      name: "骷髏手短黑T",
       price: 799,
       quantity: 0,
-      image: "https://placehold.co/50x50",
+      image:
+        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     },
     {
       id: 3,
-      name: "Sneaker",
+      name: "超時尚牛仔褲",
       price: 1299,
       quantity: 0,
-      image: "https://placehold.co/50x50",
+      image:
+        "https://images.unsplash.com/photo-1529391409740-59f2cea08bc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1124&q=80",
     },
     {
       id: 4,
-      name: "鞋子",
+      name: "質感褐色系大衣服",
       price: 3499,
       quantity: 0,
-      image: "https://placehold.co/50x50",
+      image:
+        "https://images.unsplash.com/photo-1491998664548-0063bef7856c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     },
   ];
 
