@@ -9,9 +9,12 @@ export default function Profile() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout();
-    clearCart();
-    navigate("/login");
+    const confirmDelete = window.confirm("確定要登出嗎？");
+    if (confirmDelete) {
+      logout();
+      clearCart();
+      navigate("/login");
+    }
   };
 
   // if (!user) {
@@ -29,7 +32,7 @@ export default function Profile() {
   // }
 
   return (
-    <div className="mx-auto shadow-md bg-[#f2f2f2]">
+    <div className="mx-auto bg-[#f2f2f2] h-screen">
       <div className="mb-2 p-4 flex items-center gap-2 bg-teal-600">
         <span
           className="material-icons material-icons-outlined fixed right-1 top-2 text-gray-800"
@@ -47,7 +50,10 @@ export default function Profile() {
       <div className="ShopingList_nav text-neutral-700 bg-white mx-2 p-1 rounded shadow-md">
         <div className="mb-2 mx-2 flex items-center justify-between">
           <p className="text-sm">購買清單</p>
-          <p className="text-sm flex items-center">
+          <p
+            className="text-sm flex items-center cursor-pointer"
+            onClick={() => alert("抱歉還沒有功能")}
+          >
             查看全部 <span className="material-icons">chevron_right</span>
           </p>
         </div>
@@ -72,7 +78,10 @@ export default function Profile() {
       <div className="Wallet_nav text-neutral-700  bg-white my-3 mx-2 p-1 rounded shadow-md">
         <div className="mx-2 flex items-center justify-between">
           <p className="text-sm">活動專區</p>
-          <p className="text-sm flex items-center">
+          <p
+            className="text-sm flex items-center cursor-pointer"
+            onClick={() => alert("抱歉還沒有功能")}
+          >
             查看全部{" "}
             <span className="material-icons text-xl">chevron_right</span>
           </p>
@@ -95,14 +104,14 @@ export default function Profile() {
       </div>
       {user ? (
         <button
-          className="mt-6 w-full bg-teal-800 hover:bg-teal-900 text-white py-2 px-4 rounded"
+          className="mt-6 w-[80%] block mx-auto bg-teal-800 hover:bg-teal-900 text-white py-2 px-4 rounded"
           onClick={handleLogout}
         >
           登出
         </button>
       ) : (
         <button
-          className="mt-6 w-full bg-teal-800 hover:bg-teal-900 text-white py-2 px-4 rounded"
+          className="mt-6 w-[80%] block mx-auto bg-teal-800 hover:bg-teal-900 text-white py-2 px-4 rounded"
           onClick={() => navigate("/login")}
         >
           登入

@@ -77,6 +77,19 @@ const CheckoutPage = () => {
         <div className="text-right font-bold text-lg mt-4">
           總金額：NT${totalPrice}
         </div>
+        {/* 付款詳情 */}
+        <div className="flex flex-col">
+          <h5 className="text-xl">付款詳情</h5>
+          <div className="flex justify-between text-sm text-gray-600">
+            <p>商品總金額</p> <p>NT${totalPrice}</p>
+          </div>
+          <div className="flex justify-between text-sm text-gray-600">
+            <p>運費總金額</p> <p>NT$45</p>
+          </div>
+          <div className="flex justify-between text-sm border-t border-gray-600">
+            <p>總付款金額</p> <p>NT${totalPrice + 45}</p>
+          </div>
+        </div>
 
         <button
           type="submit"

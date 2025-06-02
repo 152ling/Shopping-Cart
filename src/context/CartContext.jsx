@@ -2,6 +2,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { useAuth } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export const CartContext = createContext();
 
