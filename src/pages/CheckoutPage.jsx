@@ -9,7 +9,7 @@ const CheckoutPage = () => {
   const [selectedAddress, setSelectedAddress] = useState(() =>
     JSON.parse(localStorage.getItem("selectedAddress"))
   );
-  const { cartItems, getTotalPrice } = useContext(CartContext);
+  const { cartItems, getTotalPrice, clearCart } = useContext(CartContext);
   const totalPrice = getTotalPrice();
 
   const navigate = useNavigate();
@@ -23,7 +23,8 @@ const CheckoutPage = () => {
     e.preventDefault();
     // 模擬送出訂單
     alert("訂單已送出！");
-    navigate("/"); // 成功後導回首頁或訂單成功頁
+    clearCart();
+    navigate("/"); // 成功後導回首頁
   };
 
   return (
@@ -72,9 +73,7 @@ const CheckoutPage = () => {
           </ul>
         </div>
 
-        {/* 📦 運送資訊 */}
-
-        {/* 💰 總金額 */}
+        {/* 總金額 */}
         <div className="text-right font-bold text-lg mt-4">
           總金額：NT${totalPrice}
         </div>
